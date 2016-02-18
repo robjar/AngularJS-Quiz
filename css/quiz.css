@@ -13,9 +13,21 @@ body {
   height: 650px;
   position: relative;
   overflow: hidden;
+  background-color: #000;
   color: #fff;
-  background: #000 url(/images/background.png) no-repeat center center;
+}
+
+#myQuiz::after {
+  content: "";
+  background: url(/images/background.png) no-repeat center center;
   background-size: contain;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1; 
 }
 
 #myQuiz h1 {
@@ -77,4 +89,13 @@ body {
 #myQuiz .intro .btn {
   margin-top: 160px;
   padding: 10px 20px;
+}
+
+/* Questions */
+
+#myQuiz .question {
+  width: 550px;
+  position: absolute;
+  top: 225px;
+  left: 40px;
 }
