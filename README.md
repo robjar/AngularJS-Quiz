@@ -1,2 +1,1 @@
-# AngularJS-Quiz
-AngularJS Quiz
+On the grounds of Udemy course 'Creating a Quiz with AngularJS' by Chris Converse 
