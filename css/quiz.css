@@ -99,3 +99,18 @@ body {
   top: 225px;
   left: 40px;
 }
+
+#myQuiz .question .txt {
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+}
+
+#myQuiz .question .ans {
+  display: inline-block;
+  width: 225px;
+  border: 2px solid rgba(238,189,102,.4);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+  position: relative;
+}
