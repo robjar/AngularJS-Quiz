@@ -113,3 +113,44 @@ body {
   margin: 0 15px 15px 0;
   position: relative;
 }
+
+#myQuiz .question .ans.selected {
+  border-color: #be4b16;
+  color: #be4b16;
+}
+
+#myQuiz .question .ans.correct {
+  border-color: #459a2e;
+  color: #459a2e;
+}
+
+#myQuiz .question .ans::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: no-repeat 0 0;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#myQuiz .question .ans.selected::after {
+  content: '\2718';
+}
+
+#myQuiz .question .ans.correct::after {
+  content: '\2714';
+}
+
+#myQuiz .question.unanswered .ans {
+  cursor: pointer;
+}
+
+#myQuiz .question.unanswered .ans:hover {
+  background-color: rgba(238,189,102,.4);
+}
+
+#myQuiz .question.answered .ans {
+  cursor: default;
+}
