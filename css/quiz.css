@@ -17,17 +17,16 @@ body {
   color: #fff;
 }
 
-#myQuiz::after {
+#myQuiz::before {
   content: "";
   background: url(/images/background.png) no-repeat center center;
   background-size: contain;
-  opacity: 0.1;
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: 1; 
 }
 
 #myQuiz h1 {
