@@ -178,3 +178,40 @@ body {
 #myQuiz .feedback strong {
   color: #fff;
 }
+
+/* Results */
+
+#myQuiz .results {
+  position: absolute;
+  top: 225px;
+  left: 660px;
+  width: 550px;
+}
+
+#myQuiz .results .share {
+  margin-top: 40px;
+}
+
+#myQuiz .results .share .btn {
+  margin-right: 20px;
+  padding: 9px 15px 8px 42px;
+  background-repeat: no-repeat;
+  background-position: 10px 5px;
+  background-size: 25px 25px;
+}
+
+#myQuiz .results .share .btn.email {
+  padding-left: 10px;
+  background-color: #f0a121;
+}
+
+#myQuiz .results .share .btn.email::before {
+  padding-right: 20px;
+  content: '\2709';
+}
+
+
+#myQuiz .results .share .btn.twitter {
+  background-color: #59adeb;
+  background-image: url(/images/TwitterLogo_white.png);
+}
