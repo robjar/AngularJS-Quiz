@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="quiz">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/quiz.css"/>
 </head>
 <body>
-  <div id="myQuiz">
+  <div id="myQuiz" ng-controller="QuizCtrl">
     <h1>Test Your Knowledge: <span>AngularJS</span></h1>
     <div class="progress">
       <div class="answered correct"></div>
@@ -44,5 +44,6 @@
   </div>
   
   <script src="bower_components/angular/angular.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>
