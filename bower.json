@@ -1,0 +1,23 @@
+{
+  "name": "quiz_angularjs",
+  "homepage": "https://github.com/robjar/AngularJS-Quiz",
+  "authors": [
+    "Robert <rob_jar@wp.pl>"
+  ],
+  "description": "play with angularjs on the grounds of the Udemy course",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "angularjs",
+    "quiz",
+    "udemy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
