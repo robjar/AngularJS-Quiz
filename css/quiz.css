@@ -124,6 +124,15 @@ body {
   top: 160px;
   left: 660px;
   width: 550px;
+  transition: left 3s;
+}
+
+#myQuiz .intro.inactive {
+  left: -1100px;
+}
+
+#myQuiz .intro.active {
+  left: 30px;
 }
 
 #myQuiz .intro p {
@@ -131,8 +140,9 @@ body {
 }
 
 #myQuiz .intro .btn {
-  margin-top: 160px;
-  padding: 10px 20px;
+  font-size: 2em;
+  margin-top: 30px;
+  padding: 20px 40px;
 }
 
 /* Questions */
