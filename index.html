@@ -10,15 +10,12 @@
   <div id="myQuiz" ng-controller="QuizCtrl">
     <h1>Test Your Knowledge: <span>AngularJS</span></h1>
     <div class="progress">
-       {{ totalQuestions }}
-<!--      <div class="answered correct"></div>
-      <div class="on"></div>
-      <div></div>-->
+      <div ng-class="{on: $index === activeQuestion}" ng-repeat="q in questions"></div>
     </div>
-    <div class="intro">
+    <div class="intro" ng-class="{inactive: activeQuestion > -1, active: activeQuestion < 0}">
       <h2>Welcome</h2>
       <p>Click begin to test you knowledge</p>
-      <p class="btn">Begin</p>
+      <p class="btn" ng-click="activeQuestion = 0">Begin</p>
     </div>
     <div class="question answered">
       <p class="txt">This is a question</p>
