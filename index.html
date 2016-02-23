@@ -20,6 +20,7 @@
     <div class="question" ng-class="{inactive: activeQuestion !== $index, active: activeQuestion === $index, answered: question.questionState === 'answered'}" ng-repeat="question in questions">
       <p class="txt">{{question.question}}</p>
       <p class="ans"
+        ng-class="{selected: isSelected($parent.$index, $index), correct: isCorrect($parent.$index, $index)}"
         ng-click="selectAnswer($parent.$index, $index)"
         ng-repeat="answer in question.answers">
         {{answer.text}}

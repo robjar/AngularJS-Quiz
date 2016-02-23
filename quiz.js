@@ -19,6 +19,7 @@
       if (questionState !== 'answered') {
         $scope.questions[questionIdx].selectedAnswer = answerIdx;
         var correctAnswer = $scope.questions[questionIdx].correct;
+        $scope.questions[questionIdx].correctAnswer = correctAnswer;
         
         if (answerIdx === correctAnswer) {
           $scope.questions[questionIdx].correctness = 'correct';
@@ -28,6 +29,14 @@
         }
         $scope.questions[questionIdx].questionState = 'answered';
       }
+    };
+    
+    $scope.isSelected = function(questionIdx, answerIdx) {
+      return $scope.questions[questionIdx].selectedAnswer === answerIdx;
+    };
+
+    $scope.isCorrect = function(questionIdx, answerIdx) {
+      return $scope.questions[questionIdx].correctAnswer === answerIdx;
     };
   });
   
