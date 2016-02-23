@@ -121,18 +121,9 @@ body {
 
 #myQuiz .intro {
   position: absolute;
-  top: 160px;
+  top: 250px;
   left: 660px;
   width: 550px;
-  transition: left 3s;
-}
-
-#myQuiz .intro.inactive {
-  left: -1100px;
-}
-
-#myQuiz .intro.active {
-  left: 30px;
 }
 
 #myQuiz .intro p {
@@ -142,7 +133,7 @@ body {
 #myQuiz .intro .btn {
   font-size: 2em;
   margin-top: 30px;
-  padding: 20px 40px;
+  padding: 15px 30px;
 }
 
 /* Questions */
@@ -167,6 +158,11 @@ body {
   padding: 10px;
   margin: 0 15px 15px 0;
   position: relative;
+  cursor: pointer;
+}
+
+#myQuiz .question .ans:hover {
+  background-color: rgba(100,100,100, .5);
 }
 
 #myQuiz .question .ans.selected {
@@ -208,6 +204,11 @@ body {
 
 #myQuiz .question.answered .ans {
   cursor: default;
+}
+
+#myQuiz question.inactive,
+#myQuiz question.inactive.answered {
+  transition: left 1.5s ease-in-out;
 }
 
 /* Feedback */
@@ -269,4 +270,20 @@ body {
 #myQuiz .results .share .btn.twitter {
   background-color: #59adeb;
   background-image: url(/images/TwitterLogo_white.png);
+}
+
+/* General */
+
+#myQuiz .active,
+#myQuiz .inactive {
+  transition: left 1.5s ease-in-out;
+}
+
+#myQuiz .active {
+  left: 40px;
+}
+
+#myQuiz .intro.inactive,
+#myQuiz .inactive.answered {
+  left: -1350px;
 }

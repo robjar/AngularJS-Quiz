@@ -10,19 +10,20 @@
   <div id="myQuiz" ng-controller="QuizCtrl">
     <h1>Test Your Knowledge: <span>AngularJS</span></h1>
     <div class="progress">
-      <div ng-class="{on: $index === activeQuestion}" ng-repeat="q in questions"></div>
+      <div ng-class="{on: $index === activeQuestion}" ng-repeat="question in questions"></div>
     </div>
     <div class="intro" ng-class="{inactive: activeQuestion > -1, active: activeQuestion < 0}">
       <h2>Welcome</h2>
       <p>Click begin to test you knowledge</p>
       <p class="btn" ng-click="activeQuestion = 0">Begin</p>
     </div>
-    <div class="question answered">
-      <p class="txt">This is a question</p>
-      <p class="ans">Answer 1</p>
-      <p class="ans">Answer 2</p>
-      <p class="ans">Answer 3</p>
-      <p class="ans">Answer 4</p>
+    <div class="question" ng-class="{inactive: activeQuestion !== $index, active: activeQuestion === $index, answered: question.questionState === 'answered'}" ng-repeat="question in questions">
+      <p class="txt">{{question.question}}</p>
+      <p class="ans"
+        ng-click="selectAnswer($parent.$index, $index)"
+        ng-repeat="answer in question.answers">
+        {{answer.text}}
+      </p>
       <div class="feedback">
         <p>You are <strong>correct</strong></p>
         <p>Oops! That is not correct.</p>

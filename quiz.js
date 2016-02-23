@@ -12,6 +12,23 @@
         $scope.questions = response.data;
         $scope.totalQuestions = $scope.questions.length;
       });
+    
+    $scope.selectAnswer = function(questionIdx, answerIdx) {
+      var questionState = $scope.questions[questionIdx].questionState;
+      
+      if (questionState !== 'answered') {
+        $scope.questions[questionIdx].selectedAnswer = answerIdx;
+        var correctAnswer = $scope.questions[questionIdx].correct;
+        
+        if (answerIdx === correctAnswer) {
+          $scope.questions[questionIdx].correctness = 'correct';
+          $scope.score += 1;
+        } else {
+          $scope.questions[questionIdx].correctness = 'incorrect';
+        }
+        $scope.questions[questionIdx].questionState = 'answered';
+      }
+    };
   });
   
 }());
