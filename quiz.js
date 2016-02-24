@@ -28,6 +28,8 @@
           $scope.questions[questionIdx].correctness = 'incorrect';
         }
         $scope.questions[questionIdx].questionState = 'answered';
+        
+        $scope.percentage = ($scope.score / $scope.totalQuestions * 100).toFixed(2);
       }
     };
     
@@ -38,6 +40,11 @@
     $scope.isCorrect = function(questionIdx, answerIdx) {
       return $scope.questions[questionIdx].correctAnswer === answerIdx;
     };
+    
+    $scope.continue = function() {
+      $scope.activeQuestion += 1;
+    };
+      
   });
   
 }());

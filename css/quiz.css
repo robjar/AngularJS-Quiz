@@ -107,14 +107,18 @@ body {
   transition: opacity 1s, top 1s;
 }
 
+#myQuiz .progress div.correct::after {
+  top: -19px;
+  opacity: 1;
+}
+
 #myQuiz .progress div.on,
 #myQuiz .progress div.answered {
   background-color: orange;
 }
 
-#myQuiz .progress div.correct::after {
-  top: -19px;
-  opacity: 1;
+#myQuiz .progress div.incorrect {
+  background-color: indianred;
 }
 
 /* Intro */
@@ -209,6 +213,14 @@ body {
 #myQuiz question.inactive,
 #myQuiz question.inactive.answered {
   transition: left 1.5s ease-in-out;
+}
+
+#myQuiz .question .ans.image {
+  min-height: 60px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 
 /* Feedback */

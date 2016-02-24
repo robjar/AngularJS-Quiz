@@ -28,5 +28,15 @@
       {"id": 3, "text": "AngulaJS"}
     ],
     "correct": 3
+  },
+  {
+    "question": "What is this quiz about?",
+    "answers": [
+      {"id": 0, "image": "images/logo_js.png"},
+      {"id": 1, "image": "images/logo_html.png"},
+      {"id": 2, "image": "images/logo_css3.png"},
+      {"id": 3, "image": "images/logo_angular.png"}
+    ],
+    "correct": 3
   }
 ]
