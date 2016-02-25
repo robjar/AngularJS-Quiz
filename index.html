@@ -49,14 +49,12 @@
       <h3>Results</h3>
       <p>You scored {{percentage}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.</p>
       <p>Use the links below to challenge your friends.</p>
-      <div class="share">
-        <a href="#" class="btn email">Email</a>
-        <a href="#" class="btn twitter">Tweet</a>
-      </div>
+      <div class="share" ng-bind-html="createShareLinks(percentage)"></div>
     </div>
   </div>
   
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
   <script src="quiz.js"></script>
 </body>
 </html>
