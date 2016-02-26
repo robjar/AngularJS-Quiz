@@ -1,7 +1,7 @@
 (function() {
-  var app = angular.module('quiz', []);
+  var app = angular.module('quiz', ['ngSanitize']);
   
-  app.controller('QuizCtrl', function($scope, $http) {
+  app.controller('QuizCtrl', function($scope, $http, $sce) {
     $scope.score = 0;
     $scope.activeQuestion = -1;
     $scope.activeQuestionAnswered = 0;
@@ -43,6 +43,15 @@
     
     $scope.continue = function() {
       $scope.activeQuestion += 1;
+    };
+    
+    $scope.createShareLinks = function(percentage) {
+      var url = 'http://angularjsquiz.com',
+          emailLink = '<a class="btn email" target="_blank" href="mailto:?subject=Try to beat my score a ' + percentage + '% on this quiz!&amp;body=I scored a ' + percentage + '% on this quiz about AngularJS. Try to beat my score at ' + url + '!">Email a friend</a>',
+          twitterLink = '<a class="btn twitter" target="_blank" href="http://twitter.com/share?text=I scored a ' + percentage + '%25 on this quiz about AngularJS. Try to beat my score at&amp;hashtags=AngularJSQuiz&amp;url=' + url + '">Tweet your score</a>',
+          newMarkup = emailLink + twitterLink;
+      
+      return $sce.trustAsHtml(newMarkup);
     };
       
   });
